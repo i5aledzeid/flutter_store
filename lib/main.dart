@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_store/routes.dart';
+import 'package:flutter_store/screens/splash/splash_screen.dart';
+import 'package:flutter_store/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
+      /*theme: ThemeData(
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -23,8 +27,11 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),*/
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: theme(),
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
